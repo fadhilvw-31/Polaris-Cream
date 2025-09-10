@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polaris Cream</title>
+  <style>
+    :root{
+        --primary: #4db8ff
+        --secondary: #e6f7ff;
+        --accent: #005f99;
+        --text: #333;
+        --white: #fff;
+    }
+    body {
+      font-family: 'segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--secondary);
+      color: var(--text);
+    }
+    header {
+      background-color: linear-gradient(135deg, #4db8ff, #80d4ff);
+      color: var(--white);
+      padding: 25px;
+      text-align: center;
+      position: relative;
+    }
+    header h1{
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    header p {
+        margin: 5px 0 0;
+        font-size: 1.1rem;
+    }
+    
+    nav {
+      background-color: var(--accent);
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #b3e6ff;
+    }
+    main {
+      max-width: 1000px;
+      margin: 25px auto;
+      background: var(--white);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: var(--accent);
+      border-bottom: 3px solid #cceeff;
+      padding-bottom: 8px;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 15px;
+    }
+    .menu-item {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .menu-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .menu-item img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input, select, textarea, button {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #b3e6ff;
+      border-radius: 8px;
+      width: 100%;
+    }
+    button {
+      background-color: var(--primary);
+      color: var(--white);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: var(--accent);
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Polaris Cream</h1>
+    <p>Es Krim & Minuman Dingin - Sensasi Musim Dingin Setiap Saat</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#menu">Menu</a>
+    <a href="#order">Order</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <main>
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p><b>Polaris Cream</b> adalah destinasi terbaik untuk pecinta es krim dan minuman dingin.
+Dengan bahan premium dan rasa segar, kami menghadirkan sensasi musim dingin di setiap gigitan dan tegukan!</p>
+    </section>
+
+    <section id="menu">
+      <h2>Menu Spesial Kami</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="https://static.vecteezy.com/system/resources/previews/027/254/410/non_2x/delicious-vanila-chocolate-ice-cream-with-cone-png.png" alt="Snow Vanilla Ice Cream">
+          <h3>Snow Vanilla Ice Cream</h3>
+          <p>Rp 15.000 - Es krim vanilla lembut dengan topping selai coklat manis.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://ohsweetbasil.com/wp-content/uploads/creamy-homemade-strawberry-ice-cream-recipe-6-scaled.jpg" alt="Cappuccino">
+          <h3>Strawberry Snowflake</h3>
+          <p>Rp 24.000 - Es krim stroberi dengan potongan buah asli</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://d.line-scdn.net/obs/r/ect/ect/image_167895196408892357522dc4370t114eed0c" alt="Mocha">
+          <h3>Choco Mint Freeze</h3>
+          <p>Rp 38.000 - Minuman coklat dingin dengan sensasi mint segar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order Sekarang</h2>
+      <form onsubmit="alert('Terima kasih, pesanan Anda sudah diterima!'); return false;">
+        <input type="text" name="nama" placeholder="Nama Anda" required>
+        <input type="text" name="telepon" placeholder="Nomor Telepon" required>
+        <select name="menu" required>
+          <option value="">Pilih Menu</option>
+          <option value="vanilla">Snow Vanilla Ice Cream</option>
+          <option value="strawberry">Strawberry Snowflake</option>
+          <option value="choc0_mint">Choco Mint Freeze</option>
+        </select>
+        <textarea name="alamat" rows="3" placeholder="Alamat Pengantaran" required></textarea>
+        <button type="submit">Kirim Pesanan</button>
+      </form>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak Kami</h2>
+      <p>Alamat: Jl. Luwak No.97, Malang</p>
+      <p>Telepon: 0815-9836-3400</p>
+      <p>Email: hello@polarriscream.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Polaris Cream | Sensasi Dingin Tiada Henti</p>
+  </footer>
+</body>
+</html>
