@@ -161,18 +161,21 @@ Dengan bahan premium dan rasa segar, kami menghadirkan sensasi musim dingin di s
 
     <section id="order">
       <h2>Order Sekarang</h2>
-      <form onsubmit="alert('Terima kasih, pesanan Anda sudah diterima!'); return false;">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
-        <input type="text" name="telepon" placeholder="Nomor Telepon" required>
-        <select name="menu" required>
-          <option value="">Pilih Menu</option>
-          <option value="vanilla">Snow Vanilla Ice Cream</option>
-          <option value="strawberry">Strawberry Snowflake</option>
-          <option value="choc0_mint">Choco Mint Freeze</option>
-        </select>
-        <textarea name="alamat" rows="3" placeholder="Alamat Pengantaran" required></textarea>
-        <button type="submit">Kirim Pesanan</button>
-      </form>
+      <form action="order.php" method="POST">
+  <input type="text" name="nama" placeholder="Nama Anda" required>
+  <input type="text" name="telepon" placeholder="Nomor Telepon" required>
+  <select name="menu" required>
+    <option value="">Pilih Menu</option>
+    <option value="Snow Vanilla Ice Cream">Snow Vanilla Ice Cream</option>
+    <option value="Blueberry Blizzard">Blueberry Blizzard</option>
+    <option value="Choco Mint Freeze">Choco Mint Freeze</option>
+    <option value="Strawberry Snowflake">Strawberry Snowflake</option>
+    <option value="Arctic Lemon Tea">Arctic Lemon Tea</option>
+  </select>
+  <textarea name="alamat" rows="3" placeholder="Alamat Pengantaran" required></textarea>
+  <button type="submit">Kirim Pesanan</button>
+</form>
+
     </section>
 
     <section id="kontak">
